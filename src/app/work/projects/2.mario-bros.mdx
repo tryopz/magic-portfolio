@@ -1,0 +1,44 @@
+---
+title: "Super Mario Bros – Reinforcement‑Learning AI"
+publishedAt: "2024"
+summary: "A custom RL agent that learns to play Super Mario Bros via Q-Learning, using direct NES RAM state extraction and real-time training visualization."
+images:
+  - "/images/projects/mario-bros/mario_win.mp4"
+  - "/images/projects/mario-bros/1.png"
+  - "/images/projects/mario-bros/2.png"
+  - "/images/projects/mario-bros/3.png"
+team:
+  - name: "Alex Foulon"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+  - name: "Erwan Gautier"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+  - name: "Thomas Lemagny"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/company/once-ui/"
+---
+
+## Overview
+
+This project explores reinforcement learning by building a custom Q-Learning agent capable of playing Super Mario Bros. The agent interacts directly with the NES emulator, extracting game states from RAM for optimal performance and learning efficiency. The project demonstrates practical AI experimentation, environment simplification, and reward shaping in a classic game setting.
+
+## Key Features
+
+- **State Extraction**: Reads NES RAM at 60 FPS for lightweight, high-fidelity state representation.
+- **Simplified State Space**: Focuses on key variables (obstacles, enemies, pits) to reduce complexity and speed up learning.
+- **Custom Reward System**: Encourages progress, penalizes mistakes, and uses backpropagation for failed jumps.
+- **Efficient Training**: Q-values updated in batches for stability; buffer system penalizes fatal jumps.
+
+## Technologies Used
+
+- **Python**: Core logic, agent training, and data analysis.
+- **gym-super-mario-bros**: NES emulator and environment wrapper.
+- **Q-Learning**: Reinforcement learning algorithm for agent training.
+- **Matplotlib**: Visualization of training progress and results.
+
+## Project Highlights
+
+- Achieved a 94% win-rate on World 1-1 after ~40,000 steps.
+- Demonstrates efficient RL design and practical AI application in gaming.
+- Provided valuable experience in state abstraction, reward engineering, and agent evaluation.
