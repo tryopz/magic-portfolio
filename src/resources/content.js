@@ -1,25 +1,23 @@
-import { Logo } from "@once-ui-system/core";
-
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Erwan",
+  lastName: "Gautier",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Software Engineer",
+  avatar: "/images/persons/cat.jpeg",
+  email: "goatier.email@gmail.com",
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
@@ -28,24 +26,14 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/erwan-g-8a4059197/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/tryopz",
   },
 ];
 
@@ -55,18 +43,17 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Hi, I'm Erwan</>,
   featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    display: false,
+    title: (
+      <>
+        Recent project: <strong className="ml-4">Once UI</strong>
+      </>
+    ),
     href: "/work/building-once-ui-a-customizable-design-system",
   },
-  subline: (
-    <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  subline: <>Software Engineer / 3D engineer.</>,
 };
 
 const about = {
@@ -82,17 +69,21 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "https://kmeet.infomaniak.com/",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm a software engineer who loves solving problems with technology. I
+        have experience in cybersecurity, cloud systems, and full stack
+        development. I enjoy building secure systems and user-friendly
+        applications. I studied at ESIEE Paris and have a strong background in
+        engineering and computing. I like taking on challenges, automating
+        workflows, and creating solutions that make a real difference through
+        code and teamwork.
       </>
     ),
   },
@@ -101,41 +92,45 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Triple-A",
+        timeframe: "March 2025 - August 2025",
+        role: "Cyber Security & Cloud Infrastructure Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Led the migration of enterprise infrastructure from OVH to AWS,
+            enhancing system scalability and reliability
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Remediated application vulnerabilities in compliance with
+            penetration test reports, improving the security
+          </>,
+          <>
+            Designed and deployed CI/CD pipelines using GitHub Actions to
+            automate testing and deployment workflows
+          </>,
+          <>
+            Managed containerized applications using Kubernetes for efficient
+            orchestration and production-grade deployment
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "OGF",
+        timeframe: "September 2022 - March 2025",
+        role: "Full Stack .NET/Angular Developer Apprentice",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed and maintained scalable RESTful APIs using C#/.NET in a
+            microservices architecture
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Designed and deployed modular, reusable UI components within a
+            company-wide Angular library
+          </>,
+          <>
+            Contributed to the architecture of a service-oriented system with a
+            focus on performance, modularity, and long-term maintainability
           </>,
         ],
         images: [],
@@ -147,12 +142,34 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "ESIEE Paris / Gustave Eiffel University",
+        timeframe: "2022 - 2025",
+        description: (
+          <>
+            MSc in Computer Science – Dual academic & professional training
+            (apprenticeship)
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Lycée Yves Thépot",
+        timeframe: "2021 - 2022",
+        description: (
+          <>
+            Intensive one-year engineering preparatory program (Classe
+            préparatoire ATS)
+          </>
+        ),
+      },
+      {
+        name: "University Institute of Technology",
+        timeframe: "2019 - 2021",
+        description: (
+          <>
+            Two-year University Diploma in Electrical Engineering and Industrial
+            Computing (DUT GEII)
+          </>
+        ),
       },
     ],
   },
@@ -161,48 +178,37 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Programming Languages",
+        description: <>Python, C, C++, C# JavaScript, Go</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Frameworks & Libraries",
+        description: (
+          <>
+            Keras, scikit-learn, NumPy, pandas, OpenCV, OpenGL, OpenImageIO,
+            Angular, Vue.js, Node.js, Bun, GStreamer
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "Tools & Environments",
+        description: <>Git, Docker, Kubernetes, Terraform, Linux, Unity</>,
+        images: [],
+      },
+      {
+        title: "Databases",
+        description: (
+          <>
+            MySQL, PostgreSQL, SQLite (relational); Neo4j (graph); FAISS (vector
+            similarity)
+          </>
+        ),
+        images: [],
       },
     ],
   },
-};
-
-const blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
@@ -214,55 +220,13 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+const blog = {
+  path: "/blog",
+  label: "Blog",
+  title: "Writing about design and tech...",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { about, blog, home, newsletter, person, social, work };
